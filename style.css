@@ -2,6 +2,7 @@
   --clr-primary-900: hsl(158, 36%, 37%);
   --clr-primary-200: hsl(30, 38%, 92%);
   --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-850: hsl(152, 87%, 9%);
   --clr-neutral-800: hsl(228, 12%, 48%);
   --clr-neutral-100: hsl(0, 0%, 100%);
 
@@ -14,7 +15,7 @@
   --fs-100: 0.75rem;
 
   --fw-700: 700;
-  --fw-400: 500;
+  --fw-500: 500;
 }
 
 /* RESET */
@@ -79,4 +80,162 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem 1rem;
+}
+
+.product-image {
+  background: url(./images/image-product-mobile.jpg) no-repeat;
+  background-size: contain;
+  height: 240px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-container {
+  max-width: 343px;
+  border-radius: 0.5rem;
+}
+
+.product-information {
+  padding: 1.5rem;
+}
+
+.product-information .perfume {
+  letter-spacing: 5px;
+}
+
+h1 {
+  line-height: 2rem;
+  margin-top: 0.75rem;
+}
+
+.product-description {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.pricing span {
+  margin-left: 1.1875rem;
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  justify-content: center;
+  gap: 0.725rem;
+  margin-top: 1.25rem;
+  padding: 0.9375rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-850);
+}
+
+
+/* Media Queries */
+@media (min-width: 650px) {
+
+  .card-container {
+    display: flex;
+    min-width: 600px;
+    height: 450px;
+  }
+
+  .product-image {
+    background: url(./images/image-product-desktop.jpg) no-repeat;
+    background-size: contain;
+    min-width: 300px;
+    height: 450px;
+    border-radius: 0.5rem 0rem 0 0.5rem;
+  }
+
+  .product-information {
+    padding: 2rem;
+  }
+}
+
+
+
+
+/* Utility Classes */
+.text-primary-900 {
+  color: var(--clr-primary-900);
+}
+
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+
+.text-neutral-800 {
+  color: var(--clr-neutral-800);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.bg-primary-900 {
+  background-color: var(--clr-primary-900);
+}
+
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-neutral-850 {
+  background-color: var(--clr-neutral-850);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+.ff-accent {
+  font-family: var(--ff-accent);
+}
+
+.fw-regular {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fs-lrg {
+  font-size: 2rem;
+}
+
+.fs-med {
+  font-size: 0.875rem;
+}
+
+.fs-sm {
+  font-size: 0.8125rem;
+}
+
+.fs-xs {
+  font-size: 0.75rem;
 }
